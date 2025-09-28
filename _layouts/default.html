@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="{{ site.baseurl }}">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="maxmin">
+        <header class="Header">
+            {% if page.url == '/' %}
+                <span class="Header_name">
+                    Maria Golovina
+                </span>
+            {% else %}
+                <a class="Header_name" href="/">
+                    Maria Golovina
+                </a>
+            {% endif %}
+
+          <div class="Header_menu">
+            {% if page.url == '/' %}
+                <span class="Header_item">
+                    About
+                </span>
+            {% else %}
+                <a class="Header_item" href="/">
+                    About
+                </a>
+            {% endif %}
+
+            {% if page.url == '/projects.html' %}
+                <span class="Header_item">
+                    Projects
+                </span>
+            {% else %}
+                <a class="Header_item" href="/projects">
+                    Projects
+                </a>
+            {% endif %}
+
+            {% if page.url == '/contact.html' %}
+                <span class="Header_item">
+                    Contact
+                </span>
+            {% else %}
+                <a class="Header_item" href="/contact">
+                    Contact
+                </a>
+            {% endif %}
+          </div>
+        </header>
+
+        <div class="main">
+          <section class="mainColumn">
+            <h1>{{ page.title }}</h1>
+            {{ content }}
+          </section>
+
+          <div class="sideColumn">
+            <img src="{{ page.image }}" />
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
